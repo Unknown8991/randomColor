@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0px;
+        }
+
+        span {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-family: arial;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+
+        button {
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            padding: 6px;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(2.5px);
+            -webkit-backdrop-filter: blur(2.5px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        button:hover {
+            cursor: pointer;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: box-shadow, .2s ease-in;
+        }
+
+        .switch-hex {
+            position: fixed;
+            top: 15%;
+            left: 50%;
+            padding: 6px;
+            margin: 20;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            display: none;
+            width: 140px;
+
+        }
+
+        .active {
+            color: white;
+        }
+
+        .icon {
+            padding: 6px;
+            position: fixed;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            display: none;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(2.5px);
+            border-radius: 10px;
+            color: rgba(255, 255, 255, 0.623);
+        }
+
+        .icon:hover {
+            cursor: pointer;
+            box-shadow: 0 8px 28px 0 rgba(7, 9, 31, 0.37);
+            transition: box-shadow, .2s ease-in;
+        }
+
+        .copied {
+            position: fixed;
+            top: 40%;
+            left: 46%;
+            display: none;
+            color: black;
+            padding: 8px;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(2.5px);
+            -webkit-backdrop-filter: blur(2.5px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            animation: downUp 1s infinite;
+        }
+
+        @keyframes downUp {
+
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(-20px);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <button class="switch-hex">RGB</button>
+
+    <div class="copied">Copied color!</div>
+    <span id="text-rgb">Draw a color</span>
+    <div class="icon">
+        <i class="fa fa-clone" aria-hidden="true"></i>
+    </div>
+    <button class="generate">Generate</button>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>
