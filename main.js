@@ -47,11 +47,11 @@ function generateColor(){
         console.log(btnConvert)
         
         if(!changeBtn){
-            btnConvert.textContent = 'HEX'
+            btnConvert.textContent = 'RGB'
             span.textContent = hexColor;
             changeBtn = true;
         }else{
-            btnConvert.textContent = 'RGB'
+            btnConvert.textContent = 'HEX'
             span.textContent = colorRGB;
             changeBtn = false;
         }
